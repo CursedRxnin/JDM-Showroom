@@ -1,0 +1,364 @@
+{
+  "cars": [
+    {
+      "id": "1",
+      "brand": "Toyota",
+      "model": "Supra",
+      "title": "Toyota Supra MK4",
+      "year": 1999,
+      "engine": "3.0L, 2JZ-GTE Twin Turbo",
+      "mileage": "168,142 km",
+      "steering": "RHD",
+      "price": "$33,960",
+      "description": "Legendarna Toyota Supra MK4 — najbardziej kultowy sportowy samochód JDM lat 90. Wyposażona w słynny silnik 2JZ-GTE twin-turbo, świetny stan, oryginalna prawa kierownica.",
+      "specs": {
+        "drive": "RWD",
+        "transmission": "Automatic",
+        "power": "280+ hp"
+      },
+      "images": [
+        "images/Cars/Toyota/CB083525_1.jpg",
+        "images/Cars/Toyota/CB083525_2.jpg",
+        "images/Cars/Toyota/CB083525_3.jpg",
+        "images/Cars/Toyota/CB083525_4.jpg",
+        "images/Cars/Toyota/CB083525_5.jpg",
+        "images/Cars/Toyota/CB083525_6.jpg",
+        "images/Cars/Toyota/CB083525_7.jpg",
+        "images/Cars/Toyota/CB083525_8.jpg"
+      ]
+    },
+
+    {
+      "id": "2",
+      "brand": "Toyota",
+      "model": "Chaser",
+      "title": "Toyota Chaser JZX100",
+      "year": 2000,
+      "engine": "2.0L, 1JZ-GTE",
+      "mileage": "88,165 km",
+      "steering": "RHD",
+      "price": "$10,530",
+      "description": "Toyota Chaser JZX100 — biznes-sedan z sercem sportowego auta. Turbodoładowany 1JZ-GTE, świetny balans mocy i komfortu.",
+      "specs": {
+        "drive": "RWD",
+        "transmission": "Automatic",
+        "power": "280 hp"
+      },
+      "images": [
+        "images/Cars/Toyota/CA605568_1.jpg",
+        "images/Cars/Toyota/CA605568_2.jpg",
+        "images/Cars/Toyota/CA605568_3.jpg",
+        "images/Cars/Toyota/CA605568_4.jpg",
+        "images/Cars/Toyota/CA605568_5.jpg",
+        "images/Cars/Toyota/CA605568_6.jpg",
+        "images/Cars/Toyota/CA605568_7.jpg"
+      ]
+    },
+
+    {
+      "id": "3",
+      "brand": "Toyota",
+      "model": "Mark II",
+      "title": "Toyota Mark II GX100",
+      "year": 1997,
+      "engine": "2.0L, 1JZ-GTE",
+      "mileage": "68,807 km",
+      "steering": "RHD",
+      "price": "$7,070",
+      "description": "JZX90 Mark II — mocny sedan na 1JZ-GTE, platforma legendarnego Tourer V. Doskonały wybór do driftu i codziennej jazdy.",
+      "specs": {
+        "drive": "RWD",
+        "transmission": "Automatic",
+        "power": "280 hp"
+      },
+      "images": [
+        "images/Cars/Toyota/CB423268_1.jpg",
+        "images/Cars/Toyota/CB423268_2.jpg",
+        "images/Cars/Toyota/CB423268_3.jpg",
+        "images/Cars/Toyota/CB423268_4.jpg",
+        "images/Cars/Toyota/CB423268_5.jpg",
+        "images/Cars/Toyota/CB423268_6.jpg",
+        "images/Cars/Toyota/CB423268_7.jpg",
+        "images/Cars/Toyota/CB423268_8.jpg"
+      ]
+    },
+
+    {
+      "id": "4",
+      "brand": "Toyota",
+      "model": "Aristo",
+      "title": "Toyota Aristo V300 (JZS161)",
+      "year": 2001,
+      "engine": "3.0L, 2JZ-GTE",
+      "mileage": "148,564 km",
+      "steering": "RHD",
+      "price": "$15,240",
+      "description": "Toyota Aristo V300 — luksusowy sedan z silnikiem 2JZ-GTE z Supry. Komfort klasy premium i znakomita dynamika.",
+      "specs": {
+        "drive": "RWD",
+        "transmission": "Automatic",
+        "power": "280 hp"
+      },
+      "images": [
+        "images/Cars/Toyota/CB463483_1.jpg",
+        "images/Cars/Toyota/CB463483_2.jpg",
+        "images/Cars/Toyota/CB463483_3.jpg",
+        "images/Cars/Toyota/CB463483_4.jpg",
+        "images/Cars/Toyota/CB463483_5.jpg"
+      ]
+    },
+
+    {
+      "id": "5",
+      "brand": "Nissan",
+      "model": "Skyline GT-R",
+      "title": "Nissan Skyline R34 GT-R",
+      "year": 2002,
+      "engine": "2.6L, RB26DETT",
+      "mileage": "67,500 km",
+      "steering": "RHD",
+      "price": "$203,630",
+      "description": "Nissan Skyline GT-R R34 — ikona kultury JDM. Napęd ATTESA AWD, twin-turbo RB26, legenda japońskich dróg.",
+      "specs": {
+        "drive": "AWD",
+        "transmission": "Manual",
+        "power": "280 hp"
+      },
+      "images": [
+        "images/Cars/Nissan/CB567160_1.jpg",
+        "images/Cars/Nissan/CB567160_2.jpg",
+        "images/Cars/Nissan/CB567160_3.jpg",
+        "images/Cars/Nissan/CB567160_4.jpg",
+        "images/Cars/Nissan/CB567160_5.jpg",
+        "images/Cars/Nissan/CB567160_6.jpg",
+        "images/Cars/Nissan/CB567160_7.jpg",
+        "images/Cars/Nissan/CB567160_8.jpg"
+      ]
+    },
+
+    {
+      "id": "6",
+      "brand": "Nissan",
+      "model": "Silvia",
+      "title": "Nissan Silvia S13",
+      "year": 1991,
+      "engine": "2.0L, SR20DET",
+      "mileage": "127,990 km",
+      "steering": "RHD",
+      "price": "$17,635",
+      "description": "Silvia S13 — jedna z najlepszych platform do driftu. Lekka, szybka i bardzo rzadka.",
+      "specs": {
+        "drive": "RWD",
+        "transmission": "Automatic",
+        "power": "205 hp"
+      },
+      "images": [
+         "images/Cars/Nissan/BT847275_1.jpg",
+         "images/Cars/Nissan/BT847275_2.jpg",
+         "images/Cars/Nissan/BT847275_3.jpg",
+         "images/Cars/Nissan/BT847275_4.jpg",
+         "images/Cars/Nissan/BT847275_5.jpg",
+         "images/Cars/Nissan/BT847275_6.jpg",
+         "images/Cars/Nissan/BT847275_7.jpg"
+      ]
+    },
+
+    {
+      "id": "7",
+      "brand": "Nissan",
+      "model": "180SX",
+      "title": "Nissan 180SX X",
+      "year": 1995,
+      "engine": "2.0L, SR20DET",
+      "mileage": "92,568 km",
+      "steering": "RHD",
+      "price": "$14,840",
+      "description": "Nissan 180SX Type X — legenda driftu i street-racingu. Kultowy model dla fanów jazdy bokiem.",
+      "specs": {
+        "drive": "RWD",
+        "transmission": "Manual",
+        "power": "205 hp"
+      },
+      "images": [
+        "images/Cars/Nissan/CB410301_1.jpg",
+        "images/Cars/Nissan/CB410301_2.jpg",
+        "images/Cars/Nissan/CB410301_3.jpg",
+        "images/Cars/Nissan/CB410301_4.jpg",
+        "images/Cars/Nissan/CB410301_5.jpg",
+        "images/Cars/Nissan/CB410301_6.jpg",
+        "images/Cars/Nissan/CB410301_7.jpg",
+        "images/Cars/Nissan/CB410301_8.jpg"
+      ]
+    },
+
+    {
+      "id": "8",
+      "brand": "Nissan",
+      "model": "Gloria",
+      "title": "Nissan Gloria",
+      "year": 1999,
+      "engine": "2.5L, VQ25DE",
+      "mileage": "83,000 km",
+      "steering": "RHD",
+      "price": "$8,260",
+      "description": "Elegancki i komfortowy Nissan Gloria — klasyczny japoński sedan, ceniony za płynną jazdę, solidne wykonanie i charakter premium.",
+      "specs": {
+        "drive": "RWD",
+        "transmission": "Automatic",
+        "power": "190 hp"
+      },
+      "images": [
+        "images/Cars/Nissan/CB655594_1.jpg",
+        "images/Cars/Nissan/CB655594_2.jpg",
+        "images/Cars/Nissan/CB655594_3.jpg",
+        "images/Cars/Nissan/CB655594_4.jpg",
+        "images/Cars/Nissan/CB655594_5.jpg",
+        "images/Cars/Nissan/CB655594_6.jpg",
+        "images/Cars/Nissan/CB655594_7.jpg",
+        "images/Cars/Nissan/CB655594_8.jpg"
+      ]
+    },
+
+    {
+      "id": "9",
+      "brand": "Subaru",
+      "model": "Impreza WRX STI",
+      "title": "Subaru Impreza WRX STI",
+      "year": 1996,
+      "engine": "2.0L, EJ20T",
+      "mileage": "91,579 km",
+      "steering": "RHD",
+      "price": "$18,650",
+      "description": "Subaru Impreza WRX STI — pełny napęd AWD, kultowe rajdowe prowadzenie i legendarny dźwięk boksera.",
+      "specs": {
+        "drive": "AWD",
+        "transmission": "Manual",
+        "power": "280 hp"
+      },
+      "images": [
+        "images/Cars/Subaru/CB642495_1.jpg",
+        "images/Cars/Subaru/CB642495_2.jpg",
+        "images/Cars/Subaru/CB642495_3.jpg",
+        "images/Cars/Subaru/CB642495_4.jpg",
+        "images/Cars/Subaru/CB642495_5.jpg",
+        "images/Cars/Subaru/CB642495_6.jpg",
+        "images/Cars/Subaru/CB642495_7.jpg",
+        "images/Cars/Subaru/CB642495_8.jpg",
+        "images/Cars/Subaru/CB642495_9.jpg",
+        "images/Cars/Subaru/CB642495_10.jpg"
+      ]
+    },
+
+    {
+      "id": "10",
+      "brand": "Subaru",
+      "model": "Legacy",
+      "title": "Subaru Legacy",
+      "year": 2013,
+      "engine": "2.5L, EJ253",
+      "mileage": "140,000 km",
+      "steering": "RHD",
+      "price": "$6,850",
+      "description": "Subaru Legacy — biznes-kombi stworzony do prędkości. Podwójnie doładowany EJ253 i napęd AWD.",
+      "specs": {
+        "drive": "AWD",
+        "transmission": "Automatic",
+        "power": "167 hp"
+      },
+      "images": [
+        "images/Cars/Subaru/CB589572_1.jpg",
+        "images/Cars/Subaru/CB589572_2.jpg",
+        "images/Cars/Subaru/CB589572_3.jpg",
+        "images/Cars/Subaru/CB589572_4.jpg",
+        "images/Cars/Subaru/CB589572_5.jpg",
+        "images/Cars/Subaru/CB589572_6.jpg",
+        "images/Cars/Subaru/CB589572_7.jpg",
+        "images/Cars/Subaru/CB589572_8.jpg",
+        "images/Cars/Subaru/CB589572_9.jpg"
+      ]
+    },
+
+    {
+      "id": "11",
+      "brand": "Subaru",
+      "model": "BRZ",
+      "title": "Subaru BRZ",
+      "year": 2012,
+      "engine": "2.0L, FA20D",
+      "mileage": "141,086 km",
+      "steering": "RHD",
+      "price": "$8,250",
+      "description": "Subaru BRZ — lekkie coupé z idealnie zbalansowaną platformą RWD.",
+      "specs": {
+        "drive": "RWD",
+        "transmission": "Manual",
+        "power": "200 hp"
+      },
+      "images": [
+        "images/Cars/Subaru/CB656604_1.jpg",
+        "images/Cars/Subaru/CB656604_2.jpg",
+        "images/Cars/Subaru/CB656604_3.jpg",
+        "images/Cars/Subaru/CB656604_4.jpg"
+      ]
+    },
+
+    {
+      "id": "12",
+      "brand": "Mazda",
+      "model": "RX-7",
+      "title": "Mazda RX-7 FD3S",
+      "year": 1999,
+      "engine": "1.3L, Rotary 13B-REW",
+      "mileage": "164,500 km",
+      "steering": "RHD",
+      "price": "$38,930",
+      "description": "RX-7 FD — kultowy sportowy samochód z silnikiem rotacyjnym. Legenda tuningu i jeden z najpiękniejszych modeli JDM w historii.",
+      "specs": {
+        "drive": "RWD",
+        "transmission": "Manual",
+        "power": "280 hp"
+      },
+      "images": [
+        "images/Cars/Mazda/CB640765_1.jpg",
+        "images/Cars/Mazda/CB640765_2.jpg",
+        "images/Cars/Mazda/CB640765_3.jpg",
+        "images/Cars/Mazda/CB640765_4.jpg",
+        "images/Cars/Mazda/CB640765_5.jpg",
+        "images/Cars/Mazda/CB640765_6.jpg",
+        "images/Cars/Mazda/CB640765_7.jpg",
+        "images/Cars/Mazda/CB640765_8.jpg",
+        "images/Cars/Mazda/CB640765_9.jpg",
+        "images/Cars/Mazda/CB640765_10.jpg"
+      ]
+    },
+
+    {
+      "id": "13",
+      "brand": "Mazda",
+      "model": "RX-8",
+      "title": "Mazda RX-8",
+      "year": 2012,
+      "engine": "1.3L, Rotary Renesis",
+      "mileage": "46,000 km",
+      "steering": "RHD",
+      "price": "$11,180",
+      "description": "Mazda RX-8 — unikalny sportowy sedan z silnikiem rotacyjnym. Dobra dynamika i charakterystyczny styl.",
+      "specs": {
+        "drive": "RWD",
+        "transmission": "Automatic",
+        "power": "215 hp"
+      },
+      "images": [
+        "images/Cars/Mazda/CB415101_1.jpg",
+        "images/Cars/Mazda/CB415101_2.jpg",
+        "images/Cars/Mazda/CB415101_3.jpg",
+        "images/Cars/Mazda/CB415101_4.jpg",
+        "images/Cars/Mazda/CB415101_5.jpg",
+        "images/Cars/Mazda/CB415101_6.jpg",
+        "images/Cars/Mazda/CB415101_7.jpg",
+        "images/Cars/Mazda/CB415101_8.jpg",
+        "images/Cars/Mazda/CB415101_9.jpg"
+      ]
+    }
+  ]
+}
