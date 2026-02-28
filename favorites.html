@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="images/domo-kun.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="images/domo-kun.ico" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ulubione — JDM Showroom</title>
+
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+<div class="page">
+
+<header class="header card">
+
+  <div class="brand">
+
+    <div class="brand-logo-wrap">
+      <img
+        src="images/pngegg.png"
+        alt="JDM Flag"
+        class="brand-flag"
+      />
+    </div>
+
+    <div class="brand-info">
+      <div class="brand-title">JDM Showroom</div>
+      <div class="brand-sub">
+        Klasyczne i nowoczesne JDM — import & tuning
+      </div>
+    </div>
+  </div>
+
+  <div class="header-actions">
+
+    <button
+      id="themeToggle"
+      class="theme-toggle icon-btn"
+      aria-label="Zmień motyw"
+    >
+      🌙
+    </button>
+
+    <button id="menuBtn" class="menu-btn">
+      ☰
+    </button>
+
+  </div>
+
+</header>
+
+  <nav id="mobileMenu" class="mobile-menu">
+    <button id="closeMenu" class="close-btn">✕</button>
+
+    <a href="index.html" class="menu-item">Strona główna</a>
+    <a href="cars.html" class="menu-item">Samochody</a>
+    <a href="#contact" class="menu-item">Kontakt</a>
+    <a href="account.html" class="menu-item">Moje konto</a>
+
+    <div id="menuAuth"></div>
+
+  </nav>
+
+  <section class="section">
+    <h2 class="section-title">Twoje ulubione samochody</h2>
+
+    <div id="favoritesList" class="cars">
+    </div>
+
+    <p id="emptyInfo" class="muted" style="display:none;">
+      Nie masz jeszcze żadnych ulubionych samochodów 💔
+    </p>
+  </section>
+
+</div>
+
+<script>
+const user = JSON.parse(localStorage.getItem("currentUser"));
+if (!user) {
+  window.location.href = "login.html";
+}
+
+const menuBtn = document.getElementById("menuBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+const closeMenu = document.getElementById("closeMenu");
+
+menuBtn.onclick = () => mobileMenu.classList.add("open");
+closeMenu.onclick = () => mobileMenu.classList.remove("open");
+
+const menuAuth = document.getElementById("menuAuth");
+
+menuAuth.innerHTML = `
+  <div class="card">
+    <strong>Zalogowany jako</strong>
+    <div style="margin:6px 0 10px;">👤 ${user.name}</div>
+    <a href="account.html" class="btn ghost full">Moje konto</a>
+    <button id="logoutBtn" class="btn ghost full">Wyloguj się</button>
+  </div>
+`;
+
+document.getElementById("logoutBtn").onclick = () => {
+  localStorage.removeItem("currentUser");
+  window.location.href = "index.html";
+};
+
+async function loadFavorites() {
+  const res = await fetch("data/cars.json");
+  const data = await res.json();
+
+  const list = document.getElementById("favoritesList");
+  const emptyInfo = document.getElementById("emptyInfo");
+
+  const favorites = user.favorites || [];
+
+  const favCars = data.cars.filter(car =>
+    favorites.includes(String(car.id))
+  );
+
+  if (!favCars.length) {
+    emptyInfo.style.display = "block";
+    return;
+  }
+
+favCars.forEach(car => {
+  const card = document.createElement("div");
+  card.className = "card car visible";
+
+  card.innerHTML = `
+    <img src="${car.images?.[0] || 'images/no-image.jpg'}" alt="${car.title}">
+    <div class="car-body">
+      <div class="car-title">
+        ${car.brand} ${car.title}
+      </div>
+
+      <div class="car-specs muted">
+        ${car.year} • ${car.engine} • ${car.mileage} • ${car.steering}
+      </div>
+
+      <div class="car-row">
+        <div class="car-price">${car.price}</div>
+      </div>
+
+      <div class="form-actions">
+        <a href="car.html?id=${car.id}" class="btn ghost">Szczegóły</a>
+        <button class="btn primary remove-fav" data-id="${car.id}">
+          Usuń ❤️
+        </button>
+      </div>
+    </div>
+  `;
+
+  list.appendChild(card);
+});
+
+
+  document.querySelectorAll(".remove-fav").forEach(btn => {
+    btn.onclick = () => {
+      user.favorites = user.favorites.filter(id => id !== btn.dataset.id);
+      localStorage.setItem("currentUser", JSON.stringify(user));
+      location.reload();
+    };
+  });
+}
+
+loadFavorites();
+
+</script>
+
+<script src="scripts/script.js"></script>
+
+<div class="theme-transition-layer" id="themeLayer"></div>
+
+
+</body>
+</html>

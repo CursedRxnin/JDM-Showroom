@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="images/domo-kun.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="images/domo-kun.ico" type="image/x-icon">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Moje konto — JDM Showroom</title>
+
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+<div class="page">
+
+ <header class="header card">
+
+  <div class="brand">
+
+    <div class="brand-logo-wrap">
+      <img
+        src="images/pngegg.png"
+        alt="JDM Flag"
+        class="brand-flag"
+      />
+    </div>
+
+    <div class="brand-info">
+      <div class="brand-title">JDM Showroom</div>
+      <div class="brand-sub">
+        Klasyczne i nowoczesne JDM — import & tuning
+      </div>
+    </div>
+  </div>
+
+  <div class="header-actions">
+
+    <button
+      id="themeToggle"
+      class="theme-toggle icon-btn"
+      aria-label="Zmień motyw"
+    >
+      🌙
+    </button>
+
+    <button id="menuBtn" class="menu-btn">
+      ☰
+    </button>
+
+  </div>
+
+</header>
+
+<nav id="mobileMenu" class="mobile-menu">
+  <button id="closeMenu" class="close-btn">✕</button>
+
+  <a href="index.html" class="menu-item">Strona glowna</a>
+  <a href="cars.html" class="menu-item">Samochody</a>
+  <div id="menuAuth"></div>
+</nav>
+
+  <section class="section">
+    <div class="card" style="max-width:720px;margin:auto;display:grid;gap:20px;">
+
+      <div>
+        <h2 class="section-title">Moje konto</h2>
+        <p id="userName" class="muted"></p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;">
+        <div class="card">
+          <strong>Ulubione auta</strong>
+          <div id="favCount" class="hero-title">0</div>
+        </div>
+        <div class="card">
+          <strong>Status</strong>
+          <div class="muted">Aktywny</div>
+        </div>
+        <div class="card">
+          <strong>Rola</strong>
+          <div class="muted">Klient</div>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <a href="favorites.html" class="btn primary full">Ulubione ❤️</a>
+        <button id="logout" class="btn ghost full">Wyloguj się</button>
+      </div>
+
+    </div>
+  </section>
+
+</div>
+
+
+
+<script>
+const user = JSON.parse(localStorage.getItem("currentUser"));
+
+if (!user) {
+  window.location.href = "login.html";
+}
+
+document.getElementById("userName").textContent =
+  "Zalogowany jako: " + user.name;
+
+document.getElementById("favCount").textContent =
+  user.favorites ? user.favorites.length : 0;
+
+document.getElementById("logout").onclick = () => {
+  localStorage.removeItem("currentUser");
+  window.location.href = "index.html";
+};
+</script>
+
+<script src="scripts/script.js"></script>
+
+<div class="theme-transition-layer" id="themeLayer"></div>
+
+
+</body>
+</html>

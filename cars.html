@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="images/domo-kun.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="images/domo-kun.ico" type="image/x-icon">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>JDM Showroom — Samochody</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/cars.css">
+</head>
+<body>
+  <div class="page">
+
+<header class="header card">
+
+  <div class="brand">
+
+    <div class="brand-logo-wrap">
+      <img
+        src="images/pngegg.png"
+        alt="JDM Flag"
+        class="brand-flag"
+      />
+    </div>
+
+    <div class="brand-info">
+      <div class="brand-title">JDM Showroom</div>
+      <div class="brand-sub">
+        Klasyczne i nowoczesne JDM — import & tuning
+      </div>
+    </div>
+  </div>
+
+  <div class="header-actions">
+
+    <button
+      id="themeToggle"
+      class="theme-toggle icon-btn"
+      aria-label="Zmień motyw"
+    >
+      🌙
+    </button>
+
+    <button id="menuBtn" class="menu-btn">
+      ☰
+    </button>
+
+  </div>
+
+</header>
+
+    <nav id="mobileMenu" class="mobile-menu">
+      <button id="closeMenu" class="close-btn">✕</button>
+
+      <a href="index.html" class="menu-item">Strona główna</a>
+      <a href="index.html#services" class="menu-item">Usługi</a>
+      <a href="index.html#contact" class="menu-item">Kontakt</a>
+      <div id="menuAuth"></div>
+    </nav>
+
+    <section class="section catalog-hero">
+      <h1 class="section-title">Samochody</h1>
+      <p class="muted">
+        Wybierz markę lub przejrzyj wszystkie dostępne samochody JDM.
+      </p>
+    </section>
+
+<section class="section filters-panel card">
+
+  <div class="filters-row">
+
+    <div class="filter-group">
+      <label>Marka:</label>
+      <select class="filter-input" data-filter="brand" id="brandSelect">
+       <option value="">Wszystkie</option>
+       <option value="toyota">Toyota</option>
+       <option value="nissan">Nissan</option>
+       <option value="subaru">Subaru</option>
+       <option value="mazda">Mazda</option>
+      </select>
+    </div>
+
+    <div class="filter-group">
+      <label>Model:</label>
+      <select
+        id="modelSelect"
+        class="filter-input"
+        data-filter="model"
+>
+  <option value="">Wszystkie</option>
+</select>
+
+    </div>
+
+    <div class="filter-group">
+      <label>Rok (od):</label>
+      <input type="number" class="filter-input" data-filter="year-from" placeholder="Wprowadź rok">
+    </div>
+
+    <div class="filter-group">
+      <label>Rok (do):</label>
+      <input type="number" class="filter-input" data-filter="year-to" placeholder="Wprowadź rok">
+    </div>
+
+    <div class="filter-group">
+      <label>Przebieg:</label>
+      <select class="filter-input" data-filter="mileage">
+        <option value="all">Wszystkie</option>
+        <option value="low">0–50 000</option>
+        <option value="mid">50 000–100 000</option>
+        <option value="high">100 000+</option>
+      </select>
+    </div>
+
+    <div class="filter-group">
+      <label>Kierownica:</label>
+      <select class="filter-input" data-filter="steering">
+        <option value="">Wszystkie</option>
+        <option value="rhd">RHD</option>
+        <option value="lhd">LHD</option>
+      </select>
+    </div>
+
+  </div>
+
+  <div class="filters-actions">
+    <button class="btn primary filter-btn">Filtruj</button>
+    <button class="btn ghost reset-filter-btn">Resetuj</button>
+  </div>
+
+</section>
+
+    <section class="section">
+      <div class="cars">
+
+<article class="car card" data-id="1" data-brand="toyota">
+    <button class="fav-btn" data-id="1" aria-label="Dodaj do ulubionych">
+    🤍
+    </button>
+  <img src="images/Cars/Toyota/CB083525_1.jpg" alt="Toyota Supra MK4">
+  <div class="car-body">
+    <div class="car-row">
+      <div class="car-title">Toyota Supra RZ-S</div>
+      <div class="car-price">$33,960</div>
+    </div>
+    <div class="car-specs">1999 • 3.0L, 2JZ-GTE • 168,142 km • RHD</div>
+    <div class="car-actions">
+      <a href="car.html?id=1" class="btn ghost">Szczegóły</a>
+      <a href="index.html#contact" class="btn primary">Umów się</a>
+    </div>
+  </div>
+</article>
+
+<article class="car card" data-id="2" data-brand="toyota">
+    <button class="fav-btn" data-id="2" aria-label="Dodaj do ulubionych">
+    🤍
+    </button>
+  <img src="images/Cars/Toyota/CA605568_1.jpg" alt="Toyota Chaser JZX100">
+  <div class="car-body">
+    <div class="car-row">
+      <div class="car-title">Toyota Chaser JZX100</div>
+      <div class="car-price">$7,920</div>
+    </div>
+    <div class="car-specs">2000 • 2.0L, 1JZ-GTE • 88,165 km km • RHD</div>
+    <div class="car-actions">
+      <a href="car.html?id=2" class="btn ghost">Szczegóły</a>
+      <a href="index.html#contact" class="btn primary">Umów się</a>
+    </div>
+  </div>
+</article>
+
+<article class="car card" data-id="3" data-brand="toyota">
+    <button class="fav-btn" data-id="3" aria-label="Dodaj do ulubionych">
+    🤍
+    </button>
+  <img src="images/Cars/Toyota/CB423268_1.jpg" alt="Toyota Mark II GX100">
+  <div class="car-body">
+    <div class="car-row">
+      <div class="car-title">Toyota Mark II GX100</div>
+      <div class="car-price">$7,070</div>
+    </div>
+    <div class="car-specs">1997 • 2.0L, 1JZ-GE • 68,807 km • RHD</div>
+    <div class="car-actions">
+      <a href="car.html?id=3" class="btn ghost">Szczegóły</a>
+      <a href="index.html#contact" class="btn primary">Umów się</a>
+    </div>
+  </div>
+</article>
+
+<article class="car card" data-id="4" data-brand="toyota">
+    <button class="fav-btn" data-id="4" aria-label="Dodaj do ulubionych">
+    🤍
+    </button>
+  <img src="images/Cars/Toyota/CB463483_1.jpg" alt="Toyota Aristo V300">
+  <div class="car-body">
+    <div class="car-row">
+      <div class="car-title">Toyota Aristo V300</div>
+      <div class="car-price">$15,240</div>
+    </div>
+    <div class="car-specs">2001 • 3.0L, 2JZ-GTE • 148,564 km • RHD</div>
+    <div class="car-actions">
+      <a href="car.html?id=4" class="btn ghost">Szczegóły</a>
+      <a href="index.html#contact" class="btn primary">Umów się</a>
+    </div>
+  </div>
+</article>
+
+<article class="car card" data-id="5" data-brand="nissan">
+    <button class="fav-btn" data-id="5" aria-label="Dodaj do ulubionych">
+    🤍
+    </button>
+  <img src="images/Cars/Nissan/CB567160_1.jpg", alt="Skyline R34">
+  <div class="car-body">
+    <div class="car-row">
+      <div class="car-title">Nissan Skyline GT-R</div>
+      <div class="car-price">$203,630</div>
+    </div>
+    <div class="car-specs">2002 • 2.6L, RB26DETT • 67,500 km • RHD</div>
+    <div class="car-actions">
+      <a href="car.html?id=5" class="btn ghost">Szczegóły</a>
+      <a href="index.html#contact" class="btn primary">Umów się</a>
+    </div>
+  </div>
+</article>
+
+<article class="car card" data-id="6" data-brand="nissan">
+    <button class="fav-btn" data-id="6" aria-label="Dodaj do ulubionych">
+    🤍
+    </button>
+  <img src="images/Cars/Nissan/BT847275_1.jpg", alt="Silvia S13">
+  <div class="car-body">
+    <div class="car-row">
+      <div class="car-title">Nissan Silvia S13</div>
+      <div class="car-price">$17,635</div>
+    </div>
+    <div class="car-specs">1991 • 2.0L, SR20DET • 127,990 km • RHD</div>
+    <div class="car-actions">
+      <a href="car.html?id=6" class="btn ghost">Szczegóły</a>
+      <a href="index.html#contact" class="btn primary">Umów się</a>
+    </div>
+  </div>
+</article>
+
+<article class="car card" data-id="7" data-brand="nissan">
+    <button class="fav-btn" data-id="7" aria-label="Dodaj do ulubionych">
+    🤍
+    </button>
+  <img src="images/Cars/Nissan/CB410301_1.jpg", alt="180SX X">
+  <div class="car-body">
+    <div class="car-row">
+      <div class="car-title">Nissan 180SX X</div>
+      <div class="car-price">$14,840</div>
+    </div>
+    <div class="car-specs">1995 • 2.0L, SR20DET • 92,568 km • RHD</div>
+    <div class="car-actions">
+      <a href="car.html?id=7" class="btn ghost">Szczegóły</a>
+      <a href="index.html#contact" class="btn primary">Umów się</a>
+    </div>
+  </div>
+</article>
+
+<article class="car card" data-id="8" data-brand="nissan">
+    <button class="fav-btn" data-id="8" aria-label="Dodaj do ulubionych">
+    🤍
+    </button>
+  <img src="images/Cars/Nissan/CB655594_1.jpg", alt="Nissan Gloria">
+  <div class="car-body">
+    <div class="car-row">
+      <div class="car-title">Nissan Gloria</div>
+      <div class="car-price">$8,260</div>
+    </div>
+    <div class="car-specs">1999 • 2.5L, VQ25DE • 83,000 km • RHD</div>
+    <div class="car-actions">
+      <a href="car.html?id=8" class="btn ghost">Szczegóły</a>
+      <a href="index.html#contact" class="btn primary">Umów się</a>
+    </div>
+  </div>
+</article>
+
+<article class="car card" data-id="9" data-brand="subaru">
+    <button class="fav-btn" data-id="9" aria-label="Dodaj do ulubionych">
+    🤍
+    </button>
+  <img src="images/Cars/Subaru/CB642495_1.jpg", alt="WRX STI">
+  <div class="car-body">
+    <div class="car-row">
+      <div class="car-title">Subaru Impreza WRX STI</div>
+      <div class="car-price">$18,650</div>
+    </div>
+    <div class="car-specs">1996 • 2.0L, EJ20T • 91,579 km • RHD</div>
+    <div class="car-actions">
+      <a href="car.html?id=9" class="btn ghost">Szczegóły</a>
+      <a href="index.html#contact" class="btn primary">Umów się</a>
+    </div>
+  </div>
+</article>
+
+<article class="car card" data-id="10" data-brand="subaru">
+    <button class="fav-btn" data-id="10" aria-label="Dodaj do ulubionych">
+    🤍
+    </button>
+  <img src="images/Cars/Subaru/CB589572_1.jpg", alt="Legacy">
+  <div class="car-body">
+    <div class="car-row">
+      <div class="car-title">Subaru Legacy</div>
+      <div class="car-price">$6,850</div>
+    </div>
+    <div class="car-specs">2013 • 2.5L, EJ253 • 140,000 km • RHD</div>
+    <div class="car-actions">
+      <a href="car.html?id=10" class="btn ghost">Szczegóły</a>
+      <a href="index.html#contact" class="btn primary">Umów się</a>
+    </div>
+  </div>
+</article>
+
+<article class="car card" data-id="11" data-brand="subaru">
+    <button class="fav-btn" data-id="11" aria-label="Dodaj do ulubionych">
+    🤍
+    </button>
+  <img src="images/Cars/Subaru/CB656604_1.jpg", alt="Subaru BRZ">
+  <div class="car-body">
+    <div class="car-row">
+      <div class="car-title">Subaru BRZ</div>
+      <div class="car-price">$8,250</div>
+    </div>
+    <div class="car-specs">2012 • 2.0L, FA20D • 141,086 km • RHD</div>
+    <div class="car-actions">
+      <a href="car.html?id=11" class="btn ghost">Szczegóły</a>
+      <a href="index.html#contact" class="btn primary">Umów się</a>
+    </div>
+  </div>
+</article>
+
+<article class="car card" data-id="12" data-brand="mazda">
+    <button class="fav-btn" data-id="12" aria-label="Dodaj do ulubionych">
+    🤍
+    </button>
+  <img src="images/Cars/Mazda/CB640765_1.jpg" alt="Mazda RX-7 FD3S">
+  <div class="car-body">
+    <div class="car-row">
+      <div class="car-title">Mazda RX-7 FD3S</div>
+      <div class="car-price">$38,930</div>
+    </div>
+    <div class="car-specs">1999 • 1.3L, Rotary • 164,500 km • RHD</div>
+    <div class="car-actions">
+      <a href="car.html?id=12" class="btn ghost">Szczegóły</a>
+      <a href="index.html#contact" class="btn primary">Umów się</a>
+    </div>
+  </div>
+</article>
+
+<article class="car card" data-id="13" data-brand="mazda">
+    <button class="fav-btn" data-id="13" aria-label="Dodaj do ulubionych">
+    🤍
+    </button>
+  <img src="images/Cars/Mazda/CB415101_1.jpg" alt="Mazda RX-8">
+  <div class="car-body">
+    <div class="car-row">
+      <div class="car-title">Mazda RX-8</div>
+      <div class="car-price">$11,180</div>
+    </div>
+    <div class="car-specs">2012 • 1.3L, Renesis • 46,000 km • RHD</div>
+    <div class="car-actions">
+      <a href="car.html?id=13" class="btn ghost">Szczegóły</a>
+      <a href="index.html#contact" class="btn primary">Umów się</a>
+    </div>
+  </div>
+</article>
+
+      </div>
+    </section>
+
+  </div>
+
+
+  <div class="theme-transition-layer" id="themeLayer"></div>
+
+  <script src="scripts/script.js"></script>
+
+<footer class="footer-premium">
+  <div class="footer-inner">
+
+    <div class="footer-brand">
+      <span class="footer-logo">JDM<span>●</span>Showroom</span>
+      <p class="footer-copy">
+        © 2025 JDM Showroom · Import & tuning samochodów JDM
+      </p>
+    </div>
+
+    <nav class="footer-nav">
+      <a href="o_nas.html">O nas</a>
+      <a href="cars.html">Samochody</a>
+      <a href="polityka.html">Polityka i warunki</a>
+    </nav>
+
+    <div class="footer-social">
+        <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+        <a href="#"><img src="images/telegram.png" alt="Telegram"></a>
+        <a href="#"><img src="images/YouTube_social_white_squircle_(2017).svg.png" alt="YouTube"></a>
+    </div>
+
+  </div>
+</footer>
+
+
+</body>
+
+
+</html>

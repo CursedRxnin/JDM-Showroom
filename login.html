@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="images/domo-kun.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="images/domo-kun.ico" type="image/x-icon">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Logowanie — JDM Showroom</title>
+
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+<div class="page">
+
+<header class="header card">
+
+  <div class="brand">
+
+    <div class="brand-logo-wrap">
+      <img
+        src="images/pngegg.png"
+        alt="JDM Flag"
+        class="brand-flag"
+      />
+    </div>
+
+    <div class="brand-info">
+      <div class="brand-title">JDM Showroom</div>
+      <div class="brand-sub">
+        Klasyczne i nowoczesne JDM — import & tuning
+      </div>
+    </div>
+  </div>
+
+  <div class="header-actions">
+
+    <button
+      id="themeToggle"
+      class="theme-toggle icon-btn"
+      aria-label="Zmień motyw"
+    >
+      🌙
+    </button>
+
+    <button id="menuBtn" class="menu-btn">
+      ☰
+    </button>
+
+  </div>
+
+  <nav id="mobileMenu" class="mobile-menu">
+    <button id="closeMenu" class="close-btn">✕</button>
+
+    <a href="index.html" class="menu-item">Strona glowna</a>
+    <a href="cars.html" class="menu-item">Samochody</a>
+    <a href="#contact" class="menu-item">Kontakt</a>
+    <div id="menuAuth"></div>
+
+  </nav>
+
+</header>
+
+  <section class="section">
+    <form id="loginForm" class="card" style="max-width:420px;margin:auto;">
+      <h2 class="section-title">Logowanie</h2>
+
+      <input class="input" type="email" placeholder="Email" required>
+      <input class="input" type="password" placeholder="Hasło" required>
+
+      <div class="form-actions">
+        <button class="btn primary full">Zaloguj się</button>
+      </div>
+
+      <p class="muted" style="margin-top:10px;">
+        Nie masz konta?
+        <a href="register.html" class="muted">Zarejestruj się</a>
+      </p>
+    </form>
+  </section>
+
+</div>
+
+<script>
+document.getElementById("loginForm").addEventListener("submit", e => {
+  e.preventDefault();
+
+  const [email, password] = e.target.querySelectorAll("input");
+  const users = JSON.parse(localStorage.getItem("users")) || [];
+
+  const user = users.find(
+    u => u.email === email.value && u.password === password.value
+  );
+
+  if (!user) {
+    alert("Nieprawidłowe dane");
+    return;
+  }
+
+  localStorage.setItem("currentUser", JSON.stringify(user));
+  window.location.href = "account.html";
+});
+</script>
+
+<div class="theme-transition-layer" id="themeLayer"></div>
+
+<script src="scripts/script.js"></script>
+
+</body>
+</html>

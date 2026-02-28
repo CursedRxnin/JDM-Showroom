@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="images/domo-kun.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="images/domo-kun.ico" type="image/x-icon">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>JDM Showroom — Szczegóły samochodu</title>
+
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/car.css">
+</head>
+
+<body>
+<div class="page">
+
+<header class="header card">
+
+  <div class="brand">
+
+    <div class="brand-logo-wrap">
+      <img
+        src="images/pngegg.png"
+        alt="JDM Flag"
+        class="brand-flag"
+      />
+    </div>
+
+    <div class="brand-info">
+      <div class="brand-title">JDM Showroom</div>
+      <div class="brand-sub">
+        Klasyczne i nowoczesne JDM — import & tuning
+      </div>
+    </div>
+  </div>
+
+  <div class="header-actions">
+
+    <button
+      id="themeToggle"
+      class="theme-toggle icon-btn"
+      aria-label="Zmień motyw"
+    >
+      🌙
+    </button>
+
+    <button id="menuBtn" class="menu-btn">
+      ☰
+    </button>
+
+  </div>
+
+</header>
+
+  <nav id="mobileMenu" class="mobile-menu">
+    <button id="closeMenu" class="close-btn">✕</button>
+    <a href="index.html" class="menu-item">Strona główna</a>
+    <a href="cars.html" class="menu-item">Samochody</a>
+    <a href="index.html#services" class="menu-item">Usługi</a>
+    <a href="index.html#contact" class="menu-item">Kontakt</a>
+    <div id="menuAuth"></div>
+  </nav>
+
+  <section id="carPage" class="section card car-page-layout">
+
+<div class="car-gallery">
+
+  <div class="car-gallery-main">
+    <button class="gallery-arrow left" id="prevImg">‹</button>
+
+    <img id="mainImage" src="" alt="Car photo" style="cursor: zoom-in;">
+
+    <button class="gallery-arrow right" id="nextImg">›</button>
+  </div>
+
+  <div id="thumbs" class="car-gallery-thumbs"></div>
+
+</div>
+
+    <div class="car-sidebar">
+      <div class="car-breadcrumb">
+        <a href="cars.html">← Wszystkie samochody</a>
+      </div>
+
+      <h1 id="carTitle" class="car-page-title"></h1>
+
+      <div id="carPrice" class="car-sidebar-price-value"></div>
+
+      <div id="carSpecs" class="car-specs-grid"></div>
+
+      <div class="car-sidebar-actions">
+        <a href="index.html#contact" class="btn primary full">Umów się</a>
+      </div>
+
+      <p id="carDescription" class="car-description"></p>
+    </div>
+
+  </section>
+
+
+</div>
+
+<div id="lightbox" class="lightbox">
+  <button class="lightbox-close">✕</button>
+  <button class="lightbox-arrow left">‹</button>
+
+  <img id="lightboxImg">
+
+  <button class="lightbox-arrow right">›</button>
+</div>
+
+
+<footer class="footer-premium">
+  <div class="footer-inner">
+
+    <div class="footer-brand">
+      <span class="footer-logo">JDM<span>●</span>Showroom</span>
+      <p class="footer-copy">
+        © 2025 JDM Showroom · Import & tuning samochodów JDM
+      </p>
+    </div>
+
+    <nav class="footer-nav">
+      <a href="o_nas.html">O nas</a>
+      <a href="cars.html">Samochody</a>
+      <a href="polityka.html">Polityka i warunki</a>
+    </nav>
+
+    <div class="footer-social">
+        <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+        <a href="#"><img src="images/telegram.png" alt="Telegram"></a>
+        <a href="#"><img src="images/YouTube_social_white_squircle_(2017).svg.png" alt="YouTube"></a>
+    </div>
+
+  </div>
+</footer>
+
+
+<script src="scripts/script.js"></script>
+
+<script>
+async function loadCar() {
+  const url = new URL(window.location.href);
+  const id = url.searchParams.get("id");
+
+  if (!id) {
+    document.getElementById("carPage").innerHTML =
+      "<h2 style='padding:20px'>Błąd: samochód nie został znaleziony</h2>";
+    return;
+  }
+
+  const response = await fetch("data/cars.json");
+  const data = await response.json();
+
+  const car = data.cars.find(c => c.id == id);
+
+  if (!car) {
+    document.getElementById("carPage").innerHTML =
+      "<h2 style='padding:20px'>Samochód nie został znaleziony</h2>";
+    return;
+  }
+
+  document.getElementById("carTitle").textContent = car.title;
+  document.getElementById("carPrice").textContent = car.price;
+  document.getElementById("carDescription").textContent = car.description;
+
+  const mainImage = document.getElementById("mainImage");
+  mainImage.src = car.images[0];
+
+  const thumbsBox = document.getElementById("thumbs");
+  thumbsBox.innerHTML = "";
+
+  car.images.forEach(img => {
+    const t = document.createElement("img");
+    t.src = img;
+    t.classList.add("car-thumb");
+    t.onclick = () => (mainImage.src = img);
+    thumbsBox.appendChild(t);
+  });
+
+  document.getElementById("carSpecs").innerHTML = `
+    <div><strong>Rok:</strong> ${car.year}</div>
+    <div><strong>Silnik:</strong> ${car.engine}</div>
+    <div><strong>Przebieg:</strong> ${car.mileage}</div>
+    <div><strong>Kierownica:</strong> ${car.steering}</div>
+    <div><strong>Napęd:</strong> ${car.specs.drive}</div>
+    <div><strong>Skrzynia:</strong> ${car.specs.transmission}</div>
+    <div><strong>Moc:</strong> ${car.specs.power}</div>
+  `;
+}
+
+loadCar();
+</script>
+
+<div class="theme-transition-layer" id="themeLayer"></div>
+
+<script>
+let images = [];
+let currentIndex = 0;
+
+function showImage(index) {
+  if (index < 0) index = images.length - 1;
+  if (index >= images.length) index = 0;
+
+  currentIndex = index;
+  mainImage.src = images[currentIndex];
+}
+
+async function loadCar() {
+  const url = new URL(window.location.href);
+  const id = url.searchParams.get("id");
+
+  if (!id) return;
+
+  const response = await fetch("data/cars.json");
+  const data = await response.json();
+
+  const car = data.cars.find(c => c.id == id);
+  if (!car) return;
+
+  document.getElementById("carTitle").textContent = car.title;
+  document.getElementById("carPrice").textContent = car.price;
+  document.getElementById("carDescription").textContent = car.description;
+
+  images = car.images;
+  showImage(0);
+
+  document.getElementById("carSpecs").innerHTML = `
+    <div><strong>Rok:</strong> ${car.year}</div>
+    <div><strong>Silnik:</strong> ${car.engine}</div>
+    <div><strong>Przebieg:</strong> ${car.mileage}</div>
+    <div><strong>Kierownica:</strong> ${car.steering}</div>
+    <div><strong>Napęd:</strong> ${car.specs.drive}</div>
+    <div><strong>Skrzynia:</strong> ${car.specs.transmission}</div>
+    <div><strong>Moc:</strong> ${car.specs.power}</div>
+  `;
+}
+
+loadCar();
+
+prevImg.onclick = () => showImage(currentIndex - 1);
+nextImg.onclick = () => showImage(currentIndex + 1);
+
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightboxImg");
+
+mainImage.onclick = () => {
+  lightbox.classList.add("open");
+  lightboxImg.src = images[currentIndex];
+};
+
+document.querySelector(".lightbox-close").onclick = () =>
+  lightbox.classList.remove("open");
+
+document.querySelector(".lightbox-arrow.left").onclick = () => {
+  showImage(currentIndex - 1);
+  lightboxImg.src = images[currentIndex];
+};
+
+document.querySelector(".lightbox-arrow.right").onclick = () => {
+  showImage(currentIndex + 1);
+  lightboxImg.src = images[currentIndex];
+};
+
+lightbox.onclick = e => {
+  if (e.target === lightbox) lightbox.classList.remove("open");
+};
+
+document.addEventListener("keydown", e => {
+  if (!lightbox.classList.contains("open")) return;
+
+  if (e.key === "Escape") lightbox.classList.remove("open");
+  if (e.key === "ArrowLeft") showImage(currentIndex - 1);
+  if (e.key === "ArrowRight") showImage(currentIndex + 1);
+
+  lightboxImg.src = images[currentIndex];
+});
+</script>
+
+</body>
+</html>

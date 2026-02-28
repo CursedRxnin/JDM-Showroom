@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="images/domo-kun.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="images/domo-kun.ico" type="image/x-icon">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>JDM Showroom — sprzedaż samochodów JDM</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+
+<div class="page">
+
+<header class="header card">
+
+  <div class="brand">
+
+    <div class="brand-logo-wrap">
+      <img
+        src="images/pngegg.png"
+        alt="JDM Flag"
+        class="brand-flag"
+      />
+    </div>
+
+    <div class="brand-info">
+      <div class="brand-title">JDM Showroom</div>
+      <div class="brand-sub">
+        Klasyczne i nowoczesne JDM — import & tuning
+      </div>
+    </div>
+  </div>
+
+<div class="header-actions">
+
+  <button
+    id="themeToggle"
+    class="theme-toggle"
+    aria-label="Zmień motyw"
+  ></button>
+
+  <button id="menuBtn" class="menu-btn">☰</button>
+
+</div>
+
+
+</header>
+
+  <nav id="mobileMenu" class="mobile-menu">
+    <button id="closeMenu" class="close-btn">✕</button>
+
+    <a href="cars.html" class="menu-item">Samochody</a>
+    <a href="#services" class="menu-item">Usługi</a>
+    <a href="#contact" class="menu-item">Kontakt</a>
+    <div id="menuAuth"></div>
+  </nav>
+
+  <section class="hero">
+    <div class="card hero-main">
+      <h1 class="hero-title">
+        Import i sprzedaż samochodów JDM — bezpośrednio z Japonii
+      </h1>
+
+      <p class="hero-text">
+        Duża baza Skyline, Silvia, Supra, S2000 i rzadkich egzemplarzy.
+        Pełna historia, certyfikacja i gwarancja.
+      </p>
+
+<form id="searchForm" class="search">
+  <input
+    type="search"
+    class="search-input"
+    placeholder="Szukaj: model, rok, silnik..."
+    name="q"
+    required
+  >
+  <button class="btn primary" type="submit">Szukaj</button>
+</form>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">W magazynie</h2>
+
+    <div class="cars-scroll">
+
+<article class="car card" data-id="5" data-brand="nissan">
+    <button class="fav-btn" data-id="5" aria-label="Dodaj do ulubionych">
+    🤍
+    </button>
+  <img src="images/Cars/Nissan/CB567160_1.jpg", alt="Skyline R34">
+  <div class="car-body">
+    <div class="car-row">
+      <div class="car-title">Nissan Skyline GT-R</div>
+      <div class="car-price">$203,630</div>
+    </div>
+    <div class="car-specs">2002 • 2.6L RB26DETT • 67,500 km • RHD</div>
+    <div class="car-actions">
+      <a href="car.html?id=5" class="btn ghost">Szczegóły</a>
+      <a href="index.html#contact" class="btn primary">Umów się</a>
+    </div>
+  </div>
+</article>
+
+<article class="car card" data-id="1" data-brand="toyota">
+    <button class="fav-btn" data-id="1" aria-label="Dodaj do ulubionych">
+    🤍
+    </button>
+  <img src="images/Cars/Toyota/CB083525_1.jpg" alt="Toyota Supra MK4">
+  <div class="car-body">
+    <div class="car-row">
+      <div class="car-title">Toyota Supra RZ-S</div>
+      <div class="car-price">$33,960</div>
+    </div>
+    <div class="car-specs">1999 • 3.0L 2JZ-GTE • 168,142 km • RHD</div>
+    <div class="car-actions">
+      <a href="car.html?id=1" class="btn ghost">Szczegóły</a>
+      <a href="index.html#contact" class="btn primary">Umów się</a>
+    </div>
+  </div>
+</article>
+
+<article class="car card" data-id="12" data-brand="mazda">
+    <button class="fav-btn" data-id="12" aria-label="Dodaj do ulubionych">
+    🤍
+    </button>
+  <img src="images/Cars/Mazda/CB640765_1.jpg" alt="Mazda RX-7 FD3S">
+  <div class="car-body">
+    <div class="car-row">
+      <div class="car-title">Mazda RX-7 FD3S</div>
+      <div class="car-price">$38,930</div>
+    </div>
+    <div class="car-specs">1999 • 1.3L Rotary • 164,500 km • RHD</div>
+    <div class="car-actions">
+      <a href="car.html?id=12" class="btn ghost">Szczegóły</a>
+      <a href="index.html#contact" class="btn primary">Umów się</a>
+    </div>
+  </div>
+</article>
+
+<article class="car card" data-id="2" data-brand="toyota">
+    <button class="fav-btn" data-id="2" aria-label="Dodaj do ulubionych">
+    🤍
+    </button>
+  <img src="images/Cars/Toyota/CA605568_1.jpg" alt="Toyota Chaser JZX100">
+  <div class="car-body">
+    <div class="car-row">
+      <div class="car-title">Toyota Chaser JZX100</div>
+      <div class="car-price">$7,920</div>
+    </div>
+    <div class="car-specs">2000 • 2.0L 1JZ-GTE • 88,165 km km • RHD</div>
+    <div class="car-actions">
+      <a href="car.html?id=2" class="btn ghost">Szczegóły</a>
+      <a href="index.html#contact" class="btn primary">Umów się</a>
+    </div>
+  </div>
+</article>
+
+<article class="car card" data-id="9" data-brand="subaru">
+    <button class="fav-btn" data-id="9" aria-label="Dodaj do ulubionych">
+    🤍
+    </button>
+  <img src="images/Cars/Subaru/CB642495_1.jpg", alt="WRX STI">
+  <div class="car-body">
+    <div class="car-row">
+      <div class="car-title">Subaru Impreza WRX STI</div>
+      <div class="car-price">$18,650</div>
+    </div>
+    <div class="car-specs">1996 • 2.0L EJ20T • 91,579 km • RHD</div>
+    <div class="car-actions">
+      <a href="car.html?id=9" class="btn ghost">Szczegóły</a>
+      <a href="index.html#contact" class="btn primary">Umów się</a>
+    </div>
+  </div>
+</article>
+
+    </div>
+  </section>
+
+<section class="section" id="services">
+  <div class="services">
+
+    <div class="service card">
+      <h3 class="service-title">Import pod klucz</h3>
+      <p class="service-lead">
+        Kompleksowy import samochodów JDM z Japonii
+      </p>
+      <p class="service-text">
+        Zajmujemy się pełnym procesem importu — od wyszukania odpowiedniego
+        egzemplarza, przez weryfikację historii i stanu technicznego,
+        aż po transport, odprawę celną, certyfikację oraz przygotowanie
+        pojazdu do rejestracji w Europie.
+      </p>
+    </div>
+
+    <div class="service card">
+      <h3 class="service-title">Przegląd techniczny i tuning</h3>
+      <p class="service-lead">
+        Jakość, bezpieczeństwo i indywidualne podejście
+      </p>
+      <p class="service-text">
+        Każdy samochód przechodzi dokładną kontrolę techniczną przed
+        i po imporcie. Współpracujemy z wyspecjalizowanymi warsztatami JDM,
+        oferując serwis, diagnostykę oraz tuning — od delikatnych usprawnień
+        po zaawansowane projekty dopasowane do stylu jazdy klienta.
+      </p>
+    </div>
+
+    <div class="service card">
+      <h3 class="service-title">Trade-in i komis</h3>
+      <p class="service-lead">
+        Szybka i bezpieczna sprzedaż
+      </p>
+      <p class="service-text">
+        Umożliwiamy sprzedaż samochodu w systemie komisowym lub jego wymianę
+        (trade-in) na inny model z naszej oferty. Zapewniamy rzetelną wycenę,
+        profesjonalną prezentację auta oraz pełną obsługę transakcji.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+  <section class="section" id="contact">
+    <div class="contact">
+
+      <div class="contact-form card">
+        <h2 class="section-title">Skontaktuj się z nami</h2>
+        <form id="contactForm">
+          <input class="input" placeholder="Imię" required>
+          <input class="input" placeholder="Telefon lub email" required>
+          <textarea class="input textarea" rows="4" placeholder="Wiadomość"></textarea>
+          <div class="form-actions">
+            <button class="btn primary">Wyślij</button>
+            <button class="btn ghost" type="reset">Wyczyść</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="contact-info card">
+        <h3 class="section-title">Nasze biuro</h3>
+        <div class="map-wrapper">
+          <iframe
+            src="https://www.openstreetmap.org/export/embed.html?bbox=20.972%2C52.229%2C21.022%2C52.249&layer=mapnik&marker=52.239%2C20.997"
+            loading="lazy">
+          </iframe>
+        </div>
+        <p><strong>Warszawa</strong>, dostawa w całej Europie</p>
+        <p>📞 +48 123 456 789</p>
+        <p>✉️ contact@jdm-showroom.example</p>
+      </div>
+
+    </div>
+  </section>
+
+
+</div>
+
+<footer class="footer-premium">
+  <div class="footer-inner">
+
+    <div class="footer-brand">
+      <span class="footer-logo">JDM<span>●</span>Showroom</span>
+      <p class="footer-copy">
+        © 2025 JDM Showroom · Import & tuning samochodów JDM
+      </p>
+    </div>
+
+    <nav class="footer-nav">
+      <a href="o_nas.html">O nas</a>
+      <a href="cars.html">Samochody</a>
+      <a href="polityka.html">Polityka i warunki</a>
+    </nav>
+
+    <div class="footer-social">
+        <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+        <a href="#"><img src="images/telegram.png" alt="Telegram"></a>
+        <a href="#"><img src="images/YouTube_social_white_squircle_(2017).svg.png" alt="YouTube"></a>
+    </div>
+
+  </div>
+</footer>
+
+<script src="scripts/script.js"></script>
+</body>
+
+</html>
